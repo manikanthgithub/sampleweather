@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="weather.com.sampleweather.MainActivity">
+
+    <TextView
+        android:id="@+id/tv_city_name"
+        android:layout_width="wrap_content"
+        android:text="city name"
+        android:layout_marginLeft="50dp"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:textColor="@android:color/black"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="@string/weather_desc"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_city_name"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/current_temp"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="@string/current_temp"
+        android:layout_marginTop="10dp"
+        android:textSize="38sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/desc"
+        android:layout_centerHorizontal="true" />
+    <LinearLayout
+        android:layout_width="300dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/current_temp"
+        android:paddingLeft="30dp"
+        android:paddingStart="30dp"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+
+        <TableLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+            <TableRow
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/speed_title"
+                    android:layout_width="wrap_content"
+                    android:text="Speed"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/speed"
+                    android:layout_width="wrap_content"
+                    android:text="Speed value"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/black"
+                    android:layout_height="wrap_content" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/minTemp_title"
+                    android:layout_weight="1"
+                    android:text="Min Temp"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <TextView
+                    android:id="@+id/minTemp"
+                    android:layout_weight="1"
+                    android:text="Min Temp Value"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/maxTemp_title"
+                    android:text="Max Temp"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/maxTemp"
+                    android:text="maxTemp Value"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/humidity_title"
+                    android:text="Humidity"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/humidity"
+                    android:text="humidity Value"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/sunrise_title"
+                    android:text="Sunrise"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/sunrise"
+                    android:text="Speed"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/sunset_title"
+                android:text="Sunset"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:id="@+id/sunset"
+                android:text="sunset Value"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+</TableRow>
+        </TableLayout>
+
+        <!--<TextView-->
+            <!--android:id="@+id/deg"-->
+            <!--android:text="Speed"-->
+            <!--android:textStyle="bold"-->
+            <!--android:textSize="25sp"-->
+            <!--android:textColor="@android:color/black"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+
+
+
+
+
+    </LinearLayout>
+</RelativeLayout>
